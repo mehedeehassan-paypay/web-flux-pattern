@@ -29,6 +29,7 @@ public class ProductAggregatorService {
                this.reviewClient.getReviews(id)
         )
         .map(t -> toDto(t.getT1(), t.getT2(), t.getT3()));
+        // zip object all or nothing.
     }
 
     private ProductAggregate toDto(ProductResponse product, PromotionResponse promotion, List<Review> reviews){

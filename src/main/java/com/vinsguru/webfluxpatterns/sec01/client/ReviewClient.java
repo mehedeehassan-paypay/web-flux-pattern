@@ -28,6 +28,7 @@ public class ReviewClient {
                 .bodyToFlux(Review.class)
                 .collectList()
                 .onErrorReturn(Collections.emptyList());
+        //if upstream services has not data to return review will be empty list
     }
 
 }
